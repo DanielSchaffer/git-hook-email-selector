@@ -1,0 +1,20 @@
+{
+  "name": "git-hook-email-selector",
+  "version": "1.0.0-alpha.1",
+  "description": "A pre-commit git hook that automatically prompts you to configure the local repository with an email from a preconfigured list.",
+  "main": "git-hook-email-selector.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": "git-hook-email-selector.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DanielSchaffer/git-hook-email-selector.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DanielSchaffer/git-hook-email-selector/issues"
+  },
+  "homepage": "https://github.com/DanielSchaffer/git-hook-email-selector#readme"
+}
