@@ -1,8 +1,8 @@
 {
   "name": "git-hook-email-selector",
-  "version": "1.0.0-alpha.1",
+  "version": "1.0.0-alpha.2",
   "description": "A pre-commit git hook that automatically prompts you to configure the local repository with an email from a preconfigured list.",
-  "main": "git-hook-email-selector.js",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
