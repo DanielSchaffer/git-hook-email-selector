@@ -18,9 +18,14 @@ from a list of configured emails, and attempt to pick the best default
 by matching a pattern you define, using git config's global email as the
 fallback default if no entries are match by pattern.
 
+Additionally, you have to option to configure a separate name. If no
+name is configured, git will use whatever is set at the global or system
+level.
+
 ## Installation
 
-This hook requires Node >= 5.12.0.
+This hook requires the [NodeJS](https://nodejs.org/) runtime to be
+installed.
 
 It is recommended that this hook is installed using the `core.hooksPath`
 global configuration key. This will allow the hook to run for all of
@@ -46,13 +51,17 @@ To add an entry, add the following config keys:
 
 ```
 git config --global --add email-selector.DESCRIPTION.email YOUR_EMAIL
-git config --global --add email-selector.DESCRIPTION.email MATCH_PATTERN
+git config --global --add email-selector.DESCRIPTION.pattern MATCH_PATTERN
+# optional
+git config --global --add email-selector.DESCRIPTION.name YOUR NAME
 ```
 
 For example:
 ```
 git config --global --add email-selector.work.email joe@schmoeco.com
-git config --global --add email-selector.work.email github.com:schmoeco
+git config --global --add email-selector.work.pattern github.com:schmoeco
+# optional
+git config --global --add email-selector.work.name Joe Schmoe
 ```
 
 If you'd prefer to edit your `.gitconfig` file directly, it the section
@@ -62,6 +71,7 @@ should look like this:
 [email-selector "work"]
     email = joe@schmoeco.com
     pattern = github.com:schmoeco
+    name = Joe Schmoe
 ```
 
 You can add as many entries as you need. Patterns are optional if you
@@ -78,4 +88,6 @@ need to manually choose an email.
 
 [email-selector "oss-projects"]
     email = joe@joepensource.com
+    name = Joe Incognischmoe
 ```
+
