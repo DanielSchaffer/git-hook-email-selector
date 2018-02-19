@@ -45,21 +45,21 @@ The hook is configured entirely using `git config`.
 To add an entry, add the following config keys:
 
 ```
-git config --global --add email-chooser.DESCRIPTION.email YOUR_EMAIL
-git config --global --add email-chooser.DESCRIPTION.email MATCH_PATTERN
+git config --global --add email-selector.DESCRIPTION.email YOUR_EMAIL
+git config --global --add email-selector.DESCRIPTION.email MATCH_PATTERN
 ```
 
 For example:
 ```
-git config --global --add email-chooser.work.email joe@schmoeco.com
-git config --global --add email-chooser.work.email github.com:schmoeco
+git config --global --add email-selector.work.email joe@schmoeco.com
+git config --global --add email-selector.work.email github.com:schmoeco
 ```
 
 If you'd prefer to edit your `.gitconfig` file directly, it the section
 should look like this:
 
 ```
-[email-chooser "work"]
+[email-selector "work"]
     email = joe@schmoeco.com
     pattern = github.com:schmoeco
 ```
@@ -68,14 +68,14 @@ You can add as many entries as you need. Patterns are optional if you
 need to manually choose an email.
 
 ```
-[email-chooser "work"]
+[email-selector "work"]
     email = joe@schmoeco.com
     pattern = github.com:schmoeco
 
-[email-chooser "hobby"]
+[email-selector "hobby"]
     email = joe@home.com
     pattern = github.com:jschmoe
 
-[email-chooser "oss-projects"]
+[email-selector "oss-projects"]
     email = joe@joepensource.com
 ```
