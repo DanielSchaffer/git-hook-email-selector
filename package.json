@@ -3,7 +3,10 @@
   "version": "1.0.1",
   "description": "A pre-commit git hook that automatically prompts you to configure the local repository with an email from a preconfigured list.",
   "main": "index.js",
-  "bin": "git-hook-email-selector.js",
+  "bin": {
+    "git-hook-email-selector": "bin/git-hook-email-selector.js",
+    "install-git-hook-email-selector": "bin/install-git-hook-email-selector.js"
+  },
   "typings": "index.d.ts",
   "scripts": {
     "prebuild": "rimraf dist",

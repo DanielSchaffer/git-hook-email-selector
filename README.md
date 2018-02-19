@@ -32,16 +32,15 @@ global configuration key. This will allow the hook to run for all of
 your existing repositories, as well as any repositories you clone in the
 future. To install this hook as a core hook, run the following commands:
 
-**WARNING** This will overwrite any existing `core.hooksPath`
-configuration.
-
 ```
 npm i -g git-hook-email-selector
-mkdir ~/.git-hooks
-echo git-hook-email-selector > ~/.git-hooks/pre-commit
-chmod a+x ~/.git-hooks/pre-commit
-git config --global --add core.hooksPath ~/.git-hooks
+install-git-hook-email-selector
 ```
+
+The `install-git-hook-email-selector` script will attempt to install the
+hook to `~/.git-hooks`. If you already have `core.hooksPath` defined, it
+will use the existing path and attempt to append the
+`git-hook-email-selector` command to any existing `pre-commit` hook.
 
 ## Configuration
 

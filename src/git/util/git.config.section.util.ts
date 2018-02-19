@@ -12,11 +12,11 @@ export class GitConfigSectionUtil extends GitConfigUtil {
     }
 
     public replaceSectionKey(key: string, value: string, scope: GitConfigScope): void {
-        this.configCmd(`--replace ${this.section}.${key} ${value}`, scope);
+        this.configCmd(`--replace ${this.section}.${key} "${value}"`, scope);
     }
 
     public addSectionKey(key: string, value: string, scope: GitConfigScope): void {
-        this.configCmd(`--add ${this.section}.${key} ${value}`, scope);
+        this.configCmd(`--add ${this.section}.${key} "${value}"`, scope);
     }
 
 }
