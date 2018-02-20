@@ -1,6 +1,6 @@
 {
   "name": "git-hook-email-selector",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "A pre-commit git hook that automatically prompts you to configure the local repository with an email from a preconfigured list.",
   "main": "index.js",
   "bin": {
